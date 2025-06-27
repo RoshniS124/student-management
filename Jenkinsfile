@@ -12,10 +12,11 @@ pipeline {
 
     stages {
         stage('Checkout Code') {
-            steps {
-                git 'https://github.com/RoshniS124/student-management.git'
-            }
-        }
+    steps {
+        git branch: 'main', url: 'https://github.com/RoshniS124/student-management.git'
+    }
+}
+
 
         stage('Build with Maven') {
             steps {
